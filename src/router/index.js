@@ -14,7 +14,7 @@ export default new Router({
       component: Search
     },
     {
-      path: '/album',
+      path: '/album/:artistName/:albumName',
       name: 'Album',
       component: Album
     },
