@@ -1,15 +1,27 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import Search from '@/components/Search'
+import Album from '../components/Album'
+import Artist from '../components/Artist'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      path: '/search',
+      name: 'Search',
+      component: Search
+    },
+    {
+      path: '/album',
+      name: 'Album',
+      component: Album
+    },
+    {
+      path: '/artist',
+      name: 'Artist',
+      component: Artist
     }
   ]
 })

@@ -1,5 +1,5 @@
 <template>
-    <div></div>
+    <div>artist</div>
 </template>
 
 <script>
