@@ -4,9 +4,9 @@
       <img class="card-img-top" src="" alt="Card image cap">
     </div>
     <ul class="col">
-      <li>{{artist}}</li>
-      <li>{{albumName}}</li>
-      <li>{{releaseDate}}</li>
+      <li>{{album.artist}}</li>
+      <li>{{album.name}}</li>
+      <li>{{album.wiki.published}}</li>
     </ul>
   </div>
 </template>
@@ -15,10 +15,7 @@
 export default {
   name: 'album-info',
   props: [
-    'artist',
-    'albumName',
-    'image',
-    'releaseDate'
+    'album'
   ]
 }
 </script>

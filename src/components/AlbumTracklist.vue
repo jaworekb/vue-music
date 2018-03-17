@@ -1,6 +1,5 @@
 <template>
   <div>
-    <img :src="image" />
     <ul>
       <li v-bind:key="index" v-for="(track, key, index) in tracks">{{track.trackNumber}}.  {{track.artistName}} - {{track.trackName}} -> {{track.duration}}</li>
     </ul>
