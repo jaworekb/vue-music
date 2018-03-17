@@ -43,3 +43,11 @@ export function searchArtist (name) {
       return response.json()
     })
 }
+
+export function getAlbumInfo (sartistName, albumName) {
+  const method = 'album.getInfo'
+  return fetch(baseUrl + '?' + encodeParams({api_key: apiKey, method, artist: sartistName, album: albumName, format}))
+    .then(function (response) {
+      return response.json()
+    })
+}

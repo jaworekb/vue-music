@@ -18,13 +18,32 @@ export default {
 
 <style lang="scss">
   body {
-    background: #121212;
+    background: #3e3e3e;
     color: #ffffff;
     font-family: 'Titillium Web', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+      margin-top: 100px;
+      margin-left: 20px;
+      margin-right: 20px;
+  }
+  ul {
+      margin: 0;
+      padding: 0;
+      li {
+          list-style-type: none;
+      }
+  }
+  .card {
+      color: #121212;
   }
   .nav-pills {
+      position: fixed;
+      left: 0;
+      top: 0;
+      right: 0;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.5);
       .nav-link {
           background-color: transparent;
           margin: 20px;

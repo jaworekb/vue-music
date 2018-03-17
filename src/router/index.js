@@ -14,12 +14,12 @@ export default new Router({
       component: Search
     },
     {
-      path: '/album',
+      path: '/album/:artistName/:albumName',
       name: 'Album',
       component: Album
     },
     {
-      path: '/artist',
+      path: '/artist/:artistName',
       name: 'Artist',
       component: Artist
     }
