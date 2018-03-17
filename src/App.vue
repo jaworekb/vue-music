@@ -1,5 +1,6 @@
 <template>
     <div id="app">
+        <p class="test">aaaaa</p>
         <menu-comp></menu-comp>
         <router-view/>
     </div>
@@ -16,8 +17,11 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
     #app {
+        .test {
+            color: red;
+        }
         font-family: 'Avenir', Helvetica, Arial, sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
