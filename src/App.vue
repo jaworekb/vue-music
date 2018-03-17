@@ -27,6 +27,12 @@ export default {
       margin-left: 20px;
       margin-right: 20px;
   }
+  a {
+      color: #1db954;
+      &:hover {
+          color: #1db954;
+      }
+  }
   ul {
       margin: 0;
       padding: 0;
@@ -36,6 +42,32 @@ export default {
   }
   .card {
       color: #121212;
+  }
+  .search-form {
+      -webkit-border-radius: 25px;
+      -moz-border-radius: 25px;
+      border-radius: 25px;
+      font-size: 14px;
+      padding: 0 15px;
+      border: 1px solid #282828;
+      height: 30px;
+      margin-bottom: 30px;
+  }
+  .search-view {
+      .list-block {
+          margin-bottom: 30px;
+      }
+      h2 {
+          background: #282828;
+          padding: 5px 10px;
+          -webkit-border-radius: 10px;
+          -moz-border-radius: 10px;
+          border-radius: 10px;
+      }
+      .list-item {
+          border-bottom: 1px solid #282828;
+          padding: 5px 10px;
+      }
   }
   .nav-pills {
       position: fixed;

@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:8081/api'
+const baseUrl = 'http://localhost:8080/api'
 const apiKey = 'd50c6cc75491a481bd767cc53d917030'
 // const methods = {};
 const format = 'json'
