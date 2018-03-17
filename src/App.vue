@@ -20,13 +20,25 @@ export default {
   body {
     background: #121212;
     color: #ffffff;
+    font-family: 'Titillium Web', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
-    #app {
-        font-family: 'Avenir', Helvetica, Arial, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-align: center;
-        color: #2c3e50;
-        margin-top: 60px;
-    }
+  .nav-pills {
+      .nav-link {
+          background-color: transparent;
+          margin: 20px;
+          border: 1px solid #1db954;
+          color: #fff;
+          -webkit-border-radius: 25px;
+          -moz-border-radius: 25px;
+          border-radius: 25px;
+          text-transform: uppercase;
+          &.active,
+          &:hover {
+              background-color: #1db954;
+              border: 1px solid #1db954;
+          }
+      }
+  }
 </style>
