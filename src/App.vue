@@ -1,7 +1,6 @@
 <template>
     <div id="app">
         <menu-comp></menu-comp>
-        <div class="header-album"></div>
         <router-view/>
     </div>
 </template>
@@ -24,7 +23,7 @@ export default {
     font-family: 'Titillium Web', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-      margin-top: 75px;
+      margin-top: 100px;
       margin-left: 20px;
       margin-right: 20px;
   }
@@ -34,6 +33,9 @@ export default {
       li {
           list-style-type: none;
       }
+  }
+  .card {
+      color: #121212;
   }
   .artist-details-header {
 

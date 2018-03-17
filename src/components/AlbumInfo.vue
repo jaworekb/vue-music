@@ -1,14 +1,14 @@
 <template>
-  <div class="row">
-    <div class="col">
-      <img src="">
-    </div>
-    <div class="col">
-      <ul>
-        <li>{{artist}}</li>
-        <li>{{albumName}}</li>
-        <li>{{releaseDate}}</li>
-      </ul>
+  <div class="card">
+    <img class="card-img-top" src="" alt="Card image cap">
+    <div class="card-body">
+      <div class="card-text">
+        <ul>
+          <li>{{artist}}</li>
+          <li>{{albumName}}</li>
+          <li>{{releaseDate}}</li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
