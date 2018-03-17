@@ -1,7 +1,8 @@
 <template>
   <div>
     <h1>Artist view</h1>
-    <ArtistDetails artist="artist"></ArtistDetails>
+    <ArtistDetails :artist="artist"></ArtistDetails>
+    <h2>Top albums</h2>
     <ul class="row">
       <li class="col-4" v-for="(album, key, index) in albums" v-bind:key="index">
         <AlbumPreview :album="album"></AlbumPreview>
@@ -42,7 +43,7 @@ export default {
         })
       getArtistTopAlbums(artistName)
         .then(function (albums) {
-          self.albums = albums
+          self.albums = albums.slice(0, 6)
         })
     }
   },
