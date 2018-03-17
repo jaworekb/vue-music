@@ -1,16 +1,20 @@
 <template>
-    <div>
-        <input type="text">
-        <h2>Tracks</h2>
-        <div v-for="track in tracks" :key="track.artist + track.name">{{track.name}}</div>
-        <hr>
-        <h2>Albums</h2>
-        <div v-for="album in albums" :key="album.mbid">{{album.name}} <router-link :to="{name: 'Album', params:{artistName: album.artist, albumName: album.name}}">link</router-link></div>
-        <hr>
-        <h2>Artists</h2>
-        <div v-for="artist in artists" :key="artist.name">{{artist.name}} <router-link :to="{name: 'Artist', params: {artistName: artist.name}}">link</router-link></div>
-        <hr>
-
+    <div class="search-view">
+        <input type="text" placeholder="Search" class="search-form">
+        <div class="row">
+            <div class="list-block col-xs-12 col-sm-4">
+                <h2>Tracks</h2>
+                <div class="list-item" v-for="track in tracks" :key="track.artist + track.name">{{track.name}}</div>
+            </div>
+            <div class="list-block col-xs-12 col-sm-4">
+                <h2>Albums</h2>
+                <div class="list-item" v-for="album in albums" :key="album.mbid">{{album.name}} <router-link :to="{name: 'Album', params:{artistName: album.artist, albumName: album.name}}">link</router-link></div>
+            </div>
+            <div class="list-block col-xs-12 col-sm-4">
+                <h2>Artists</h2>
+                <div class="list-item" v-for="artist in artists" :key="artist.name">{{artist.name}} <router-link :to="{name: 'Artist', params: {artistName: artist.name}}">link</router-link></div>
+            </div>
+        </div>
     </div>
 </template>
 
