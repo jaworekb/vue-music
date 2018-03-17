@@ -17,3 +17,11 @@ export function getArtistInfo (name) {
       return response.json()
     })
 }
+
+export function getAlbumInfo (name) {
+  const method = 'album.getInfo'
+  return fetch(baseUrl + '?' + encodeParams({api_key: apiKey, method, artist: name, format}))
+    .then(function (response) {
+      return response.json()
+    })
+}
