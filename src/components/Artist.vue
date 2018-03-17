@@ -3,8 +3,8 @@
     <h1> Artist view</h1>
     <ArtistDetails artist="artist"></ArtistDetails>
     <ul>
-      <li v-for="album in albums">
-        <AlbumPreview></AlbumPreview>
+      <li v-for="(album, key, index) in albums" v-bind:key="index">
+        <AlbumPreview album="album"></AlbumPreview>
       </li>
     </ul>
   </div>
