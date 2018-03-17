@@ -1,13 +1,14 @@
 <template>
     <div>
+        <input type="text" v-model="">
         <h2>Tracks</h2>
         <div v-for="track in tracks" :key="track.artist + track.name">{{track.name}}</div>
         <hr>
         <h2>Albums</h2>
-        <div v-for="album in albums" :key="album.mbid">{{album.name}} <router-link to="Search">link</router-link></div>
+        <div v-for="album in albums" :key="album.mbid">{{album.name}} <router-link :to="{name: 'Album', params:{artistName: album.artist, albumName: album.name}}">link</router-link></div>
         <hr>
         <h2>Artists</h2>
-        <div v-for="artist in tracks" :key="">{{artist.name}}</div>
+        <div v-for="artist in artists" :key="artist.name">{{artist.name}} <router-link :to="{name: 'Artist', params: {artistName: artist.name}}">link</router-link></div>
         <hr>
 
     </div>
@@ -30,15 +31,12 @@ export default {
       var vm = this
 
       searchTrack(phrase).then(function (data) {
-        console.log(data.results.trackmatches.track)
         vm.tracks = data.results.trackmatches.track
       })
       searchAlbum(phrase).then(function (data) {
-        console.log(data.results.albummatches.album)
         vm.albums = data.results.albummatches.album
       })
       searchArtist(phrase).then(function (data) {
-        console.log(data.results.artistmatches.artist)
         vm.artists = data.results.artistmatches.artist
       })
     }
