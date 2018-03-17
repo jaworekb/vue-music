@@ -1,6 +1,6 @@
 <template>
     <div>
-        <input type="text" v-model="">
+        <input type="text">
         <h2>Tracks</h2>
         <div v-for="track in tracks" :key="track.artist + track.name">{{track.name}}</div>
         <hr>
