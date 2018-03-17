@@ -1,5 +1,9 @@
 <template>
-<AlbumInfo artist="Cher" albumName="Believe" releaseDate="6 Apr 1999"></AlbumInfo>
+  <div>
+    <AlbumInfo artist="Cher" albumName="Believe" releaseDate="6 Apr 1999"></AlbumInfo>
+    <AlbumTracklist></AlbumTracklist>
+  </div>
+
 </template>
 
 <script>
