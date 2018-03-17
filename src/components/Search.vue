@@ -1,6 +1,9 @@
 <template>
     <div>
-        <input type="text">
+        <form action="" @submit.prevent="search">
+        <input type="text" v-model="searchInput">
+            <button type="submit">search</button>
+        </form>
         <h2>Tracks</h2>
         <div v-for="track in tracks" :key="track.artist + track.name">{{track.name}}</div>
         <hr>
@@ -19,11 +22,13 @@ import { searchTrack, searchArtist, searchAlbum } from '../rest'
 
 export default {
   name: 'search',
+  props: ['phrase'],
   data () {
     return {
       tracks: [],
       albums: [],
-      artists: []
+      artists: [],
+      searchInput: ''
     }
   },
   methods: {
@@ -39,10 +44,14 @@ export default {
       searchArtist(phrase).then(function (data) {
         vm.artists = data.results.artistmatches.artist
       })
+    },
+    search () {
+      this.$router.push(this.searchInput)
     }
   },
   created () {
-    this.fetchData(this.$route.params.phrase)
+    this.fetchData(this.phrase)
+    this.searchInput = this.phrase
   },
   watch: {
     '$route': 'fetchData'
