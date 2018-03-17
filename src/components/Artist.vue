@@ -1,8 +1,12 @@
 <template>
   <div>
     <h1> Artist view</h1>
-    <ArtistDetails></ArtistDetails>
-    <AlbumPreview></AlbumPreview>
+    <ArtistDetails artist="artist"></ArtistDetails>
+    <ul>
+      <li v-for="album in albums">
+        <AlbumPreview></AlbumPreview>
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -15,6 +19,17 @@ export default {
   components: {
     AlbumPreview,
     ArtistDetails
+  },
+  data () {
+    return {
+      artist: {
+        name: 'Cher'
+      },
+      albums: [
+        {name: 'some album name'},
+        {name: 'some other album name'}
+      ]
+    }
   }
 }
 </script>

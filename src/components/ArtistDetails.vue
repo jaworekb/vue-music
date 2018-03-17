@@ -9,10 +9,10 @@
 <script>
 export default {
   name: 'artist-details',
-
+  props: ['artist'],
   computed: {
     image () {
-      return 'link'
+      return 'http://userserve-ak.last.fm/serve/85/5112299.jpg'
     },
     name () {
       return 'cher'
