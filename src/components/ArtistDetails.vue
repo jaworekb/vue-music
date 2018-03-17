@@ -1,8 +1,12 @@
 <template>
-  <div>
-    <h2>{{name}}</h2>
-    <img v-bind:src="image"/>
-    <p>{{bio}}</p>
+  <div class="row artist-details-header">
+    <div class="col-xs-12 col-sm-4">
+      <img v-bind:src="image" class="img-thumbnail"/>
+    </div>
+    <ul class="col">
+      <li><h2>{{name}}</h2></li>
+      <li>{{bio}}</li>
+    </ul>
   </div>
 </template>
 
