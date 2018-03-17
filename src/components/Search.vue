@@ -1,8 +1,7 @@
 <template>
     <div class="search-view">
-        <form action="" @submit.prevent="search">
-            <input type="text" placeholder="Search" class="search-form">
-            <button type="submit">search</button>
+        <form action="" @submit.prevent="search" class="search-form">
+            <input type="text" placeholder="Search"><button type="submit"><i class="fas fa-search"></i></button>
         </form>
 
         <div class="row">

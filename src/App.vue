@@ -44,14 +44,27 @@ export default {
       color: #121212;
   }
   .search-form {
-      -webkit-border-radius: 25px;
-      -moz-border-radius: 25px;
-      border-radius: 25px;
-      font-size: 14px;
-      padding: 0 15px;
-      border: 1px solid #282828;
-      height: 30px;
-      margin-bottom: 30px;
+    margin-bottom: 30px;
+    input {
+        -webkit-border-radius: 25px 0 0 25px;
+        -moz-border-radius: 25px 0 0 25px;
+        border-radius: 25px 0 0 25px;
+        font-size: 14px;
+        padding: 0 15px;
+        border: 1px solid #282828;
+        height: 31px;
+    }
+      button {
+          background: #1db954;
+          border: 1px solid #1db954;
+          color: #fff;
+          -webkit-border-radius: 0 25px 25px 0;
+          -moz-border-radius: 0 25px 25px 0;
+          border-radius: 0 25px 25px 0;
+          height: 30px;
+          width: 36px;
+          margin: 0 0 0 -1px;
+      }
   }
   .search-view {
       .list-block {
