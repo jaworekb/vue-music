@@ -27,6 +27,12 @@ export default {
       margin-left: 20px;
       margin-right: 20px;
   }
+  a {
+      color: #1db954;
+      &:hover {
+          color: #1db954;
+      }
+  }
   ul {
       margin: 0;
       padding: 0;
