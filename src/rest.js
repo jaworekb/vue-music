@@ -13,9 +13,15 @@ function encodeParams (params) {
 export function getArtistInfo (name) {
   const method = 'artist.getInfo'
   return fetch(baseUrl + '?' + encodeParams({api_key: apiKey, method, artist: name, format}))
-    .then(function (response) {
-      return response.json()
-    })
+    .then((response) => response.json())
+    .then((data) => data.artist)
+}
+
+export function getArtistTopAlbums (artistName) {
+  const method = 'artist.gettopalbums'
+  return fetch(baseUrl + '?' + encodeParams({api_key: apiKey, method, artist: artistName, format}))
+    .then((response) => response.json())
+    .then((data) => data.topalbums.album)
 }
 
 export function searchTrack (name) {

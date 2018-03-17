@@ -1,28 +1,23 @@
 <template>
-  <div class="card">
-    <img class="card-img-top" src="" alt="Card image cap">
-    <div class="card-body">
-      <div class="card-text">
-        <ul>
-          <li v-bind:key="index" v-for="(track, key, index) in tracks">{{track.name}}</li>
-        </ul>
-      </div>
-    </div>
+  <div>
+    <router-link :to="{name:'', params:{artistsName:artistName, albumNameL}}"><img :src="image" /></router-link>
+    <h4>{{albumName}}</h4>
   </div>
 </template>
 
 <script>
 export default {
   name: 'album-preview',
-  data: function () {
-    return {
-      image: 'someimgurl',
-      name: 'some album name',
-      tracks: [
-        {name: 'some track 1'},
-        {name: 'some track 2'},
-        {name: 'some track 3'}
-      ]
+  props: ['album'],
+  computed: {
+    albumName () {
+      return this.album.name
+    },
+    artistName () {
+      return this.album.name
+    },
+    image () {
+      return this.album.image ? this.album.image.filter((image) => image.size === 'small')['#text'] : ''
     }
   }
 }

@@ -27,40 +27,30 @@ import { searchTrack, searchArtist, searchAlbum } from '../rest'
 
 export default {
   name: 'search',
-  props: ['phrase'],
   data () {
     return {
       tracks: [],
       albums: [],
-      artists: [],
-      searchInput: ''
+      artists: []
     }
   },
   methods: {
     fetchData (phrase) {
-      console.log(phrase)
       var vm = this
 
       searchTrack(phrase).then(function (data) {
-        console.log(data)
         vm.tracks = data.results.trackmatches.track
       })
       searchAlbum(phrase).then(function (data) {
-        console.log(data)
         vm.albums = data.results.albummatches.album
       })
       searchArtist(phrase).then(function (data) {
-        console.log(data)
         vm.artists = data.results.artistmatches.artist
       })
-    },
-    search () {
-      this.$router.push(this.searchInput)
     }
   },
   created () {
-    this.fetchData(this.phrase)
-    this.searchInput = this.phrase
+    this.fetchData(this.$route.params.phrase)
   },
   watch: {
     '$route': 'fetchData'
