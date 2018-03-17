@@ -1,9 +1,13 @@
 <template>
-  <div>
-    <img :src="image" />
-    <ul>
-      <li v-bind:key="index" v-for="(track, key, index) in tracks">{{track.name}}</li>
-    </ul>
+  <div class="card">
+    <img class="card-img-top" src="" alt="Card image cap">
+    <div class="card-body">
+      <div class="card-text">
+        <ul>
+          <li v-bind:key="index" v-for="(track, key, index) in tracks">{{track.name}}</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </template>
 

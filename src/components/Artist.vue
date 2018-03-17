@@ -1,9 +1,9 @@
 <template>
   <div>
-    <h1> Artist view</h1>
+    <h1>Artist view</h1>
     <ArtistDetails artist="artist"></ArtistDetails>
-    <ul>
-      <li v-for="(album, key, index) in albums" v-bind:key="index">
+    <ul class="row">
+      <li class="col-4" v-for="(album, key, index) in albums" v-bind:key="index">
         <AlbumPreview album="album"></AlbumPreview>
       </li>
     </ul>

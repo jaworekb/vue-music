@@ -18,7 +18,7 @@ export default {
 
 <style lang="scss">
   body {
-    background: #121212;
+    background: #3e3e3e;
     color: #ffffff;
     font-family: 'Titillium Web', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
